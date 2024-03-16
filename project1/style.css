@@ -1,0 +1,116 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+body {
+  background: #070513;
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  margin: 0;
+  font-family:'Times New Roman', Times, serif;
+  color: #030000;
+}
+
+.card {
+  background: #010a0f;
+  border-radius: 4px;
+  height: 85vh;
+  width: 80vw;
+  box-shadow: 0 5px 15px rgb(0, 0, 0); /* Adjusted box shadow for depth */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1em;
+  overflow: hidden;
+}
+
+@media only screen and (min-width: 1000px) {
+  .card {
+    flex-direction: row-reverse;
+  }
+  .card img.birthday {
+    width: 70%;
+    max-width: 30vw;
+    max-height: unset;
+  }
+}
+
+@media only screen and (max-height: 640px) {
+  .card {
+    flex-direction: row-reverse;
+  }
+  .card img.birthday {
+    width: 100%;
+    max-width: 30vw;
+    max-height: unset;
+  }
+}
+
+img.birthday {
+  max-height: 20vh;
+}
+
+
+.text {
+  padding: 1em;
+  color: #fff8f8; /* Adjusted text color */
+}
+
+.muted {
+  opacity: 0.8;
+}
+
+.space {
+  height: 100px;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 3;
+  }
+}
+h1 {
+  font-family:'Times New Roman', Times, serif, cursive;
+  margin-bottom: 0.3rem;
+  font-size: 4rem;
+  color: #132d75;
+  letter-spacing: 4px;
+  text-align: center;
+}
+
+button {
+  border: none;
+  padding: 0.75em;
+  background: #02071f;
+  color: white;
+  border-radius: 999px;
+  font-size: 1.2rem;
+  font-family: monospace;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+button:hover {
+  background: #e3563d;
+}
+@media screen and (max-width: 700px) {
+  h1 {
+    font-size: 3rem;
+  }
+  button {
+    font-size: 1rem;
+    animation-play-state: running;
+  }
+}
+
+body.play-music {
+  animation: fadeIn 2s ease-in-out; /* Adjust the animation duration and timing function as needed */
+}
+
